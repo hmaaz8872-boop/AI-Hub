@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZ AI - Smart Life Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <h2 class="logo">MAZ<span> AI</span></h2>
+
+            <nav>
+                <a href="#dashboard" class="active">🏠 Dashboard</a>
+                <a href="#assistant">🤖 AI Assistant</a>
+                <a href="#tasks">📋 My Tasks</a>
+                <a href="#notes">📝 Quick Notes</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>MAZ AI</p>
+                <small>Your Smart Life Companion</small>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Welcome to MAZ AI 👋</h1>
+                    <p>Manage your daily activities smartly.</p>
+                </div>
+
+                <div class="profile">M</div>
+            </header>
+
+            <section id="dashboard">
+                <h2>Dashboard Overview</h2>
+
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Tasks</h3>
+                        <h1 id="totalTasks">0</h1>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Completed</h3>
+                        <h1 id="completedTasks">0</h1>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Saved Notes</h3>
+                        <h1 id="totalNotes">0</h1>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Productivity</h3>
+                        <h1 id="productivity">0%</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section id="assistant" class="section-card">
+                <h2>🤖 AI Assistant</h2>
+                <p>Ask something or get a quick suggestion.</p>
+
+                <div id="chatBox" class="chat-box">
+                    <div class="bot-message">
+                        Hello! Welcome to MAZ AI. How can I help you?
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" id="userMessage"
+                        placeholder="Write your message...">
+
+                    <button onclick="startVoice()">🎤</button>
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </section>
+
+            <section id="tasks" class="section-card">
+                <h2>📋 My Task Manager</h2>
+
+                <div class="input-group">
+                    <input type="text" id="taskInput"
+                        placeholder="Enter your task...">
+
+                    <select id="taskPriority">
+                        <option value="Normal">Normal</option>
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                    </select>
+
+                    <button onclick="addTask()">Add Task</button>
+                </div>
+
+                <div class="filter-buttons">
+                    <button onclick="filterTasks('all')">All</button>
+                    <button onclick="filterTasks('pending')">Pending</button>
+                    <button onclick="filterTasks('completed')">Completed</button>
+                </div>
+
+                <ul id="taskList"></ul>
+            </section>
+
+            <section id="notes" class="section-card">
+                <h2>📝 Quick Notes</h2>
+
+                <div class="input-group">
+                    <input type="text" id="noteInput"
+                        placeholder="Write your note...">
+
+                    <button onclick="addNote()">Save Note</button>
+                </div>
+
+                <div id="notesList" class="notes-list"></div>
+            </section>
+
+            <footer>
+                <p>© 2026 MAZ AI. All Rights Reserved.</p>
+                <small>Designed for a smarter everyday life.</small>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
